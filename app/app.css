@@ -1,30 +1,53 @@
-/* app css stylesheet */
+@media only screen {
+  html {}
+  body {}
+  h1, h2, h3, h4, h5, h6 {}
+  a {}
+  a:hover {}
+}
+/* SMALL SCREENS ONLY (0 - 640px) */
+@media only screen and (max-width: 40.063em) {}
+/* MEDIUM SCREENS AND UP (641px+) */
+@media only screen and (min-width: 40.063em) {
+  /* HEADER */
+  /* ================= */
+  .wrapper-header {
+    width: 100%;
+    margin-top: -2rem;
+    height: 80px;
+    background: black;
+  }
+  .wrapper-header h1 {
+    text-align: center;
+  }
+  .wrapper-header h1 > a {
+    color: #fff;
+  }
+  /* NAVIGATION */
+  /* ================= */
+    .wrapper-nav {
+        width: 100%;
+        background: black;
+        text-align: center;
+        padding: 3rem;
+    }
+  .menu {
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+  }
+  .menu > li {
+    display: inline;
+  }
+  .menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+  }
+  .menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+  }
+  /* CONTENT */
+  /* ================= */
+  /* FOOTER */
+  /* ================= */
 }
 
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}

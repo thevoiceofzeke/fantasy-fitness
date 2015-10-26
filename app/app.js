@@ -3,10 +3,31 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
+  'myApp.home',
+  'myApp.fitlog',
+    'myApp.matchup',
+    'myApp.settings',
+  'myApp.version',
+    'ui.bootstrap'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+  $routeProvider.otherwise({redirectTo: '/home'});
+}])
+.directive('header', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'partials/header.html'
+  }
+})
+.directive('navigation', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'partials/navigation.html'
+  }
+})
+.directive('footer', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'partials/footer.html'
+  }
+});
