@@ -5,13 +5,18 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.home',
   'myApp.fitlog',
-    'myApp.matchup',
-    'myApp.settings',
+  'myApp.matchup',
+  'myApp.settings',
   'myApp.version',
-    'ui.bootstrap'
+  'ui.bootstrap'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
+}])
+.service('UserService', ['http', function($http) {
+  this.getUser = function(id) {
+    $http.get('');
+  };
 }])
 .directive('header', function() {
   return {
