@@ -3,7 +3,9 @@
   body {}
   h1, h2, h3, h4, h5, h6 {}
   a {}
-  a:hover {}
+  a:hover {
+    text-decoration: none;
+  }
 }
 /* SMALL SCREENS ONLY (0 - 640px) */
 @media only screen and (max-width: 40.063em) {}
@@ -13,41 +15,92 @@
   /* ================= */
   .wrapper-header {
     width: 100%;
-    margin-top: -2rem;
-    height: 80px;
-    background: black;
+    height: 40px;
+    background: #222;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
   }
-  .wrapper-header h1 {
-    text-align: center;
-  }
-  .wrapper-header h1 > a {
+  .wrapper-header .btn {
+    padding: 3px 9px;
+    border: 2px solid #757575;
+    font-weight: 300;
     color: #fff;
   }
+  .wrapper-header .btn:hover {
+    color: #fff;
+    border-color: #fff;
+    background-color: #4d4d4d;
+  }
+  .wrapper-header .title-header {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 200;
+    padding: 0 1.5rem;
+    letter-spacing: 1px;
+  }
+  .wrapper-header .menu-actions {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper-header .menu-actions li {
+    display: inline;
+    padding: 0 0.5rem;
+  }
+  .wrapper-header .menu-actions li:last-child {
+    padding-right: 1.5rem;
+  }
+
   /* NAVIGATION */
   /* ================= */
-    .wrapper-nav {
-        width: 100%;
-        background: black;
-        text-align: center;
-        padding: 3rem;
-    }
-  .menu {
-
+  .wrapper-nav {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    background: #00A8E0;
+  }
+  .wrapper-nav .menu {
+    margin: 0;
+    padding: 0;
   }
   .menu > li {
     display: inline;
+    padding: 1.5rem;
+    float: left;
+    background: transparent;
   }
-  .menu > li:before {
-    content: "|";
-    padding-right: 0.3em;
+  .menu > li:hover {
+    background: #0197CA;
   }
-  .menu > li:nth-child(1):before {
-    content: "";
-    padding: 0;
+  .menu > li > a {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+  }
+  .menu > li > a:hover {
+    text-decoration: none;
+    color: #fff;
   }
   /* CONTENT */
   /* ================= */
+  .wrapper-body {
+    padding: 1.5rem 3rem;
+    min-height: 400px;
+  }
   /* FOOTER */
   /* ================= */
+  .wrapper-footer {
+    width: 100%;
+    min-height: 60px;
+    background: #222;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
