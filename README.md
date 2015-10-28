@@ -18,8 +18,6 @@ git clone https://github.com/thevoiceofzeke/fantasy-fitness.git
 cd fantasy-fitness
 ```
 
-Please feel free to fork the project and make pull requests against this repo.
-
 ### Run the Application
 
 Use `npm start` to runt he application, then browse to: `http://localhost:8000/app/index.html`.
