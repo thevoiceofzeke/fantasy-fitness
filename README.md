@@ -9,22 +9,14 @@ Git: [http://git-scm.com/](http://git-scm.com/)
 
 node.js: [http://nodejs.org/](http://nodejs.org/).
 
-### Clone angular-seed
+### Clone Fantasy Fitness
 
-Clone the angular-seed repository using [git][git]:
+Clone this repo using git:
 
 ```
-git clone git@bitbucket.org:zekeWitter/fantasy-fitness.git
+git clone https://github.com/thevoiceofzeke/fantasy-fitness.git
 cd fantasy-fitness
 ```
-
-If you just want to start a new project without the angular-seed commit history then you can do:
-
-```bash
-git clone --depth=1 https://github.com/angular/angular-seed.git <your-project-name>
-```
-
-The `depth=1` tells git to only pull down one commit worth of historical data.
 
 ### Run the Application
 
