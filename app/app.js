@@ -13,11 +13,6 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
 }])
-.service('UserService', ['http', function($http) {
-  this.getUser = function(id) {
-    $http.get('');
-  };
-}])
 .directive('header', function() {
   return {
     restrict: 'E',
