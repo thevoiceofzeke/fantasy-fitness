@@ -40,15 +40,15 @@
     padding: 0 1.5rem;
     letter-spacing: 1px;
   }
-  .wrapper-header .menu-actions {
+  .menu-actions {
     margin: 0;
     padding: 0;
   }
-  .wrapper-header .menu-actions li {
+  .menu-actions li {
     display: inline;
     padding: 0 0.5rem;
   }
-  .wrapper-header .menu-actions li:last-child {
+  .menu-actions li:last-child {
     padding-right: 1.5rem;
   }
 
@@ -92,6 +92,43 @@
     padding: 1.5rem 3rem;
     min-height: 400px;
   }
+  /* LOG VIEW */
+  /* ================= */
+  .view-log .menu-actions {
+    margin: 4rem 0px 0px;
+  }
+  .table-log h4 {
+    margin: 0.5rem 0;
+  }
+  .table-log .label-section {
+    padding: 0.5rem 1rem;
+  }
+  .table-log .label-category {
+    font-weight: 600;
+  }
+  .table-log .label-description,
+  .table-log .table .label-date {
+    font-size: 12px;
+    color: #888;
+  }
+  .table-log .table .label-day {
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .table-log .table thead > tr > th {
+    text-align: center;
+  }
+  .table-log .table tbody > tr > .cell-activity {
+    width: 30%;
+  }
+  .table-log .table tbody > tr > .cell-number {
+    vertical-align: middle;
+    width: 10%;
+  }
+  /*.table-log .table tbody > tr > td:not(.label-activity) {*/
+    /*width: 6%;*/
+  /*}*/
   /* FOOTER */
   /* ================= */
   .wrapper-footer {

@@ -1,5 +1,48 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="view-log">
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <h2>Activity Log <br> <small>{{ dateRange[0] | date: 'mediumDate' }} - {{ dateRange[1] | date: 'mediumDate' }}</small></h2>
+    </div>
+    <div class="col-sm-6 col-md-6">
+      <ul class="menu-actions pull-right">
+        <li><a class="btn btn-save btn-primary">Save</a></li>
+        <li><a class="btn btn-submit btn-success">Submit</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="table-log table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="empty"></th>
+              <th ng-repeat="date in dates"><span class="label-day">{{ date | date: 'EEE' }}</span><br>
+                <span class="label-date">{{ date | date: 'MM/dd' }}</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="8" class="label-section"><h4>Hourly</h4></td></tr>
+            <tr ng-repeat="activity in activitiesHourly">
+              <td class="cell-activity"><span class="label-category">{{ activity.category }}</span>
+                <br><span class="label-description">{{ activity.description }}</span></td>
+              <td class="cell-number" ng-repeat="date in dates"><input class="form-control input-number" type="number"></td>
+            </tr>
+            <tr><td colspan="8" class="label-section"><h4>Individual Movements</h4></td></tr>
+            <tr ng-repeat="activity in activitiesIndividual">
+              <td class="cell-activity"><span class="label-category">{{ activity.category }}</span>
+                <br><span class="label-description">{{ activity.description }}</span></td>
+              <td class="cell-number" ng-repeat="date in dates"><input class="form-control input-number" type="number"></td>
+            </tr>
+            <tr><td colspan="8" class="label-section"><h4>Bonuses</h4></td></tr>
+            <tr ng-repeat="activity in activitiesBonus">
+              <td class="cell-activity"><span class="label-category">{{ activity.category }}</span>
+                <br><span class="label-description">{{ activity.description }}</span></td>
+              <td class="cell-number" ng-repeat="date in dates"><input class="form-control input-number" type="number"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
